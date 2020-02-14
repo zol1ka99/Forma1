@@ -1,10 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Forma1.Repository.Team">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Position X="1.25" Y="1" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Repository\Team.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="racers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Forma1.Modell.Racer">
+    <Position X="3.75" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAgQAIgAAAAAAAAAAAEAABEAAAEAAAAAAA=</HashCode>
+      <FileName>Modell\Racer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
