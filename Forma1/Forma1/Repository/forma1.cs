@@ -8,6 +8,7 @@ namespace Forma1.Repository
 {
     /// <summary>
     /// A forma egy nyilvántartó osztály
+    /// Szolgáltatást nyújt a Service rétegnek
     /// </summary>
     class forma1
     {

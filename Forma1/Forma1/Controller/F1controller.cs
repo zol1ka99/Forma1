@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace Forma1.Controller
 {
+    /// <summary>
+    /// Controller réget kapcsolatot teremtn a GUI és a Service réteg között
+    /// Feladata a bemenő adatok vizsgálata
+    /// Feladata a megjelenítendő adatok átalakítása GUI számára
+    /// Feladata a programozónak szánt hibaüzenetek megjelenítése
+    /// </summary>
+
     class F1controller
     {
         TeamService teamService;
