@@ -23,5 +23,9 @@ namespace Forma1.Service
             f1Repository = new forma1();
         }
 
+        public void addTeam(string teamName)
+        {
+            
+        }
     }
 }

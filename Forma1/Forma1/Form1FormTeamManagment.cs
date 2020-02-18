@@ -1,5 +1,4 @@
-﻿using Forma1.Controller;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +12,10 @@ namespace Forma1
 {
     public partial class Form1Form : Form
     {
-        F1controller controller;
-        public Form1Form()
+        private void buttonAddTeam_Click(object sender, EventArgs e)
         {
-            controller = new F1controller();
-            InitializeComponent();
+            string teamName = textBoxTeamName.Text;
+            controller.addteamToF1(teamName);
         }
     }
 }

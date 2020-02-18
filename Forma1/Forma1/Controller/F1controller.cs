@@ -23,5 +23,10 @@ namespace Forma1.Controller
             teamService = new TeamService();
 
         }
+
+        public void addteamToF1(string teamName)
+        {
+            teamService.addTeam(teamName);
+        }
     }
 }
