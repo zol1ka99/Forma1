@@ -1,19 +1,21 @@
-﻿using Forma1projekt.Modell;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Forma1projekt.Repository
+
+using Forma1.Model;
+
+namespace Forma1.Repository
 {
     /// <summary>
-    /// A Forma1-ben szereplő csapatok
+    /// Forma 1 ben szereplő csapat.
     /// </summary>
     class Team
     {
         /// <summary>
-        /// Csapat neve
+        /// A csapat neve
         /// </summary>
         private string name;
         /// <summary>
@@ -21,9 +23,9 @@ namespace Forma1projekt.Repository
         /// </summary>
         List<Racer> racers;
         /// <summary>
-        /// A cspat nével jöhet létre
+        /// A csapat csak névvel jöhet létre
         /// </summary>
-        /// <param name="csapat neve"></param>
+        /// <param name="name">Csapat neve</param>
         public Team(string name)
         {
             this.name = name;

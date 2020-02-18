@@ -11,33 +11,34 @@ namespace Forma1.Model
     /// </summary>
     class Racer
     {
+        /// <summary>
+        /// A versenyző osztály adattagjai
+        /// </summary>
         private string name;
         private int age;
-        private int salery;
-        
+        private int salary;
+
         /// <summary>
-        /// Üres konstruktor lehetetlen adatokkal.
+        /// Üres konstruktor lehetetlen adatokkal
         /// </summary>
         public Racer()
         {
-            name = string.Empty;
+            name = String.Empty;
             age = -1;
-            salery = -1;
+            salary = -1;
         }
-
         /// <summary>
         /// Teljes konstruktor
         /// </summary>
         /// <param name="name">Versenyző neve</param>
         /// <param name="age">Versenyző életkora</param>
-        /// <param name="salery">Versenyző fizetése</param>
-        public Racer(string name, int age, int salery)
+        /// <param name="salary">Versenyző fizetése</param>
+        public Racer(string name, int age, int salary)
         {
             this.name = name;
             this.age = age;
-            this.salery = salery;
+            this.salary = salary;
         }
-
         /// <summary>
         /// Versenyző nevének megadása
         /// </summary>
@@ -46,50 +47,33 @@ namespace Forma1.Model
         {
             this.name = name;
         }
-
         /// <summary>
-        /// Versenyző korának megadása
+        /// A versenyző életkorának megadása
         /// </summary>
-        /// <param name="age">A versenyző kora</param>
+        /// <param name="age">A versenyző életkora</param>
         public void setAge(int age)
         {
             this.age = age;
         }
-
         /// <summary>
-        /// Versenyző fizetésének megadása
+        /// A versenyző fizetésénének megadása
         /// </summary>
-        /// <param name="salery">A versenyző fizetése</param>
-        public void setSalery(int salery)
+        /// <param name="salary">A versenyző fizetése</param>
+        public void setSalary(int salary)
         {
-            this.salery = salery;
+            this.salary = salary;
         }
-
-        /// <summary>
-        /// Versenyző nevét adja vissza
-        /// </summary>
-        /// <returns>A versenyző neve</returns>
         public string getName()
         {
             return name;
         }
-
-        /// <summary>
-        /// Versenyző életkorát adja vissza
-        /// </summary>
-        /// <returns>A versenyző életkorát</returns>
         public int getAge()
         {
             return age;
         }
-
-        /// <summary>
-        /// Versenyző fizetését adja vissza
-        /// </summary>
-        /// <returns>A versenyző fizetését</returns>
-        public int getSalery()
+        public int getSalary()
         {
-            return salery;
+            return salary;
         }
     }
 }

@@ -45,17 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\F1controller.cs" />
     <Compile Include="Form1Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1Form.Designer.cs">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modell\Racer.cs" />
+    <Compile Include="Model\Racer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\Forma1.cs" />
+    <Compile Include="Repository\forma1.cs" />
     <Compile Include="Repository\Team.cs" />
+    <Compile Include="Service\TeamService.cs" />
     <EmbeddedResource Include="Form1Form.resx">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,10 +79,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Systemdesign\MVC.cd" />
     <None Include="Systemdesign\TeamRacerAssociation.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

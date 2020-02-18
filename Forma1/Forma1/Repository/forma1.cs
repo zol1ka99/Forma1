@@ -7,28 +7,26 @@ using System.Threading.Tasks;
 namespace Forma1.Repository
 {
     /// <summary>
-    /// Az F1 nyilvántartó osztálya
+    /// A forma egy nyilvántartó osztály
     /// </summary>
-    class F1
+    class forma1
     {
         /// <summary>
-        /// Az F1 csapatok
+        /// forma 1 csapatok
         /// </summary>
         List<Team> teams;
-
-        public F1()
+        public forma1()
         {
             teams = new List<Team>();
         }
-
         /// <summary>
-        /// Létrehoz egy új csapatot az F1-ben
+        /// Létrehoz egy új csapatot név alapján
         /// </summary>
-        /// <param name="name">Új csapat neve</param>
+        /// <param name="name">Az csapat neve</param>
         public void add(string name)
-        {
-            Team t = new Team(name);
-            teams.Add(t);
+        { 
+            Team team = new Team(name);
+            teams.Add(team);
         }
     }
 }
