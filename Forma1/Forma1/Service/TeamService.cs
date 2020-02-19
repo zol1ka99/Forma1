@@ -1,4 +1,5 @@
-﻿using Forma1.Repository;
+﻿using Forma1.myexception;
+using Forma1.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,15 @@ namespace Forma1.Service
 
         public void addTeam(string teamName)
         {
-            
+            try
+            {
+                Team t = new Team(teamName);
+                f1Repository.add(t);
+            }
+            catch (F1Exception f1e)
+            {
+                throw new TeamServiceException(f1e.Message);
+            }
         }
     }
 }

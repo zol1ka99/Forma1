@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Forma1.myexception;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,19 @@ namespace Forma1.Repository
         {
             teams = new List<Team>();
         }
+
+        public void add(Team t)
+        {
+            if (teams == null)
+            {
+                throw new F1Exception("VÉGZETES HIBA!");
+            }
+            else
+            {
+                teams.Add(t);
+            }
+        }
+
         /// <summary>
         /// Létrehoz egy új csapatot név alapján
         /// </summary>

@@ -58,9 +58,11 @@
     <Compile Include="Model\Racer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="myexception\F1Exception.cs" />
     <Compile Include="Repository\forma1.cs" />
     <Compile Include="Repository\Team.cs" />
     <Compile Include="Service\TeamService.cs" />
+    <Compile Include="myexception\TeamServiceException.cs" />
     <EmbeddedResource Include="Form1Form.resx">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </EmbeddedResource>
