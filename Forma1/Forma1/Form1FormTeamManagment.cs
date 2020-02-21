@@ -16,6 +16,13 @@ namespace Forma1
         {
             string teamName = textBoxTeamName.Text;
             controller.addteamToF1(teamName);
+            listBoxTeam.DataSource = null;
+            listBoxTeam.DataSource = controller.getTeamNames();
+        }
+
+        public object getTeamNames()
+        {
+            throw new NotImplementedException();
         }
     }
 }
