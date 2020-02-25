@@ -1,4 +1,4 @@
-﻿namespace Forma1
+﻿namespace Forma1projekt
 {
     partial class Form1Form
     {

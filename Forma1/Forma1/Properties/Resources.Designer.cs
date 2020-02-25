@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Forma1.Properties
+namespace Forma1projekt.Properties
 {
 
 

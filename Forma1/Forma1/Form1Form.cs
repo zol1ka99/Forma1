@@ -1,4 +1,4 @@
-﻿using Forma1.Controller;
+﻿using Forma1projekt.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,15 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Forma1
+namespace Forma1projekt
 {
     public partial class Form1Form : Form
     {
-        F1controller controller;
+        F1Controller f1c;
         public Form1Form()
         {
-            controller = new F1controller();
             InitializeComponent();
+            f1c = new F1Controller();
         }
+
+        
     }
 }

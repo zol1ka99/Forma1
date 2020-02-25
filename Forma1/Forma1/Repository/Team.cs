@@ -1,35 +1,44 @@
-﻿using System;
+﻿using Forma1projekt.Modell;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-using Forma1.Model;
-
-namespace Forma1.Repository
+namespace Forma1projekt.Repository
 {
     /// <summary>
-    /// Forma 1 ben szereplő csapat.
+    /// A Forma1-ben szereplő csapatok
     /// </summary>
     class Team
     {
         /// <summary>
-        /// A csapat neve
+        /// Csapat neve
         /// </summary>
         private string name;
+
         /// <summary>
         /// Csapat versenyzői
         /// </summary>
         List<Racer> racers;
+
         /// <summary>
-        /// A csapat csak névvel jöhet létre
+        /// A cspat nével jöhet létre
         /// </summary>
-        /// <param name="name">Csapat neve</param>
+        /// <param name="csapat neve"></param>
         public Team(string name)
         {
             this.name = name;
             racers = new List<Racer>();
+        }
+
+        /// <summary>
+        /// Visszaadja a Csapat nevét
+        /// </summary>
+        /// <returns></returns>
+        public string getTeamName()
+        {
+            return name;
         }
     }
 }

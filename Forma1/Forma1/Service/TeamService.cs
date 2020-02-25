@@ -36,5 +36,22 @@ namespace Forma1.Service
                 throw new TeamServiceException(f1e.Message);
             }
         }
+
+        public void deleteTeam(string temaNameDelete)
+        {
+            try
+            {
+                int numberOfTheRacers = f1Repository.getNumberOfRacers(teamNameToDelete);
+                if (numberOfTheRacers > 0)
+                {
+                    throw new TeamServiceException(teamNameToDelete + "nem lehet törölni, mert van még versenyzóje.");
+                }
+            }
+            catch (F1Exception f1e)
+            {
+
+                throw new TeamServiceException(f1e.Message)
+            }
+        }
     }
 }

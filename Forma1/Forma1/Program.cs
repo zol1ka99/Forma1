@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Forma1
+namespace Forma1projekt
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Forma1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1Form());
+            Application.Run(new Form1Form()); 
         }
     }
 }

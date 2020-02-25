@@ -45,7 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\F1controller.cs" />
+    <Compile Include="Exceptionmy\ControllerException.cs" />
+    <Compile Include="Controll\F1Controller.cs" />
     <Compile Include="Form1FormTeamManagment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,14 +56,14 @@
     <Compile Include="Form1Form.Designer.cs">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Racer.cs" />
+    <Compile Include="Modell\Racer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="myexception\F1Exception.cs" />
-    <Compile Include="Repository\forma1.cs" />
+    <Compile Include="Exceptionmy\F1Exception.cs" />
+    <Compile Include="Repository\Forma1.cs" />
     <Compile Include="Repository\Team.cs" />
-    <Compile Include="Service\TeamService.cs" />
-    <Compile Include="myexception\TeamServiceException.cs" />
+    <Compile Include="TeamService\TeamService.cs" />
+    <Compile Include="Exceptionmy\TeamServiceException.cs" />
     <EmbeddedResource Include="Form1Form.resx">
       <DependentUpon>Form1Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +91,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

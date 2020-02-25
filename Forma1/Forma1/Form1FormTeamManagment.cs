@@ -8,21 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Forma1
+namespace Forma1projekt
 {
     public partial class Form1Form : Form
     {
         private void buttonAddTeam_Click(object sender, EventArgs e)
         {
             string teamName = textBoxTeamName.Text;
-            controller.addteamToF1(teamName);
+            f1c.addTeamToF1(teamName);
             listBoxTeam.DataSource = null;
-            listBoxTeam.DataSource = controller.getTeamNames();
+            listBoxTeam.DataSource = f1c.getTeamNames();
+            textBoxTeamName.Text = string.Empty;
         }
-
-        public object getTeamNames()
+        private void buttonDeleteTeam_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (listBoxTeam.SelectedIndex < 0)
+            {
+                return;
+            }
+            string teamNameToDelete = listBoxTeam.Text;
+            f1c.deleteTeam(teamNameToDelete);
+            listBoxTeam.DataSource = null;
+            listBoxTeam.DataSource = f1c.getTeamNames();
         }
     }
 }
