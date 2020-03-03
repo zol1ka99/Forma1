@@ -22,14 +22,24 @@ namespace Forma1projekt
         }
         private void buttonDeleteTeam_Click(object sender, EventArgs e)
         {
-            if (listBoxTeam.SelectedIndex < 0)
+            try
             {
-                return;
+                if (listBoxTeam.SelectedIndex < 0)
+                {
+                    return;
+                }
+                string teamNameToDelete = listBoxTeam.Text;
+                f1c.deleteTeam(teamNameToDelete);
+                listBoxTeam.DataSource = null;
+                listBoxTeam.DataSource = f1c.getTeamNames();
             }
-            string teamNameToDelete = listBoxTeam.Text;
-            f1c.deleteTeam(teamNameToDelete);
-            listBoxTeam.DataSource = null;
-            listBoxTeam.DataSource = f1c.getTeamNames();
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
+
     }
 }

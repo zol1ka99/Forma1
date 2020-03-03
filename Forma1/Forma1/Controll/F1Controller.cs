@@ -54,14 +54,17 @@ namespace Forma1projekt.Controller
                 {
                     try
                     {
-
+                        teamService.deleteTeam(teamNameToDelete);
                     }
-                    catch (Exception)
+                    catch (TeamServiceException tse)
                     {
-
-                        throw;
+                        Debug.WriteLine(tse.Message);
                     }
-                    teamService.deleteTeam(teamNameToDelete);
+                    catch (TeamServiceToGUIException tsge)
+                    {
+                        throw new ControllerException(tsge.Message);
+                    }
+
                 }
             }
             catch (TeamServiceException tse)

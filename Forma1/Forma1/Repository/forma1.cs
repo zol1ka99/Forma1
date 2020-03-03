@@ -1,6 +1,7 @@
 ﻿using Forma1projekt.Exceptionmy;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,16 +72,64 @@ namespace Forma1projekt.Repository
             }
         }
 
-        internal int getNumberOfRacers(string teamNameToDelete)
+        /// <summary>
+        /// Csapat versenyzőinek száma
+        /// </summary>
+        /// <param name="teamName">A csapat neve</param>
+        /// <returns>Vissza versenyzőinek számát</returns>
+        public int getNumberOfRacers(string teamName)
         {
-            throw new NotImplementedException();
+            if (teams == null)
+            {
+                throw new F1Exception("Nincs ilyen lista.");
+            }
+            else
+            {
+                foreach (Team t in teams)
+                {
+                    if (t.getTeamName() == teamName)
+                    {
+                        try
+                        {
+                            return t.getNumberOfRacers();
+                        }
+                        catch (TeamException te)
+                        {
+                            Debug.WriteLine(te.Message);
+                            throw new F1Exception(teamName+ " csapatot nem lehet törölni!");
+                        }
+                       
+                    }
+                }
+                throw new F1Exception(teamName+" csapat név nem létezik!!!!!!!!!!!!!");
+            }
         }
 
-        internal void delete(string teamNameToDelete)
+        /// <summary>
+        /// Adott nevű team törlése (van itt bug)
+        /// </summary>
+        /// <param name="teamNameToDelete"> Csapat név</param>
+        public void delete(string teamNameToDelete)
         {
-            throw new NotImplementedException();
+            if (teams == null)
+            {
+                throw new F1Exception("");
+            }
+            else
+            {
+                foreach (Team t in teams)
+                {
+                    int index = 0;
+                    if (t.getTeamName() == teamNameToDelete)
+                    {
+                        teams.RemoveAt(index);
+                    }
+                    index++;
+                }
+                throw new F1Exception(teamNameToDelete + " csapat nem létezik, nem lehet törölni.");
+                
+            }
         }
-
         /// <summary>
         /// Létrehoz eg csapatoto egy név alapján
         /// </summary>

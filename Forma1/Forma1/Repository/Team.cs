@@ -1,4 +1,5 @@
-﻿using Forma1projekt.Modell;
+﻿using Forma1projekt.Exceptionmy;
+using Forma1projekt.Modell;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,23 @@ namespace Forma1projekt.Repository
         public string getTeamName()
         {
             return name;
+        }
+
+        /// <summary>
+        /// A csapat versenyzőinek száma
+        /// </summary>
+        /// <returns>A csapat számát adja vissza</returns>
+        public int getNumberOfRacers()
+        {
+            if (racers == null)
+            {
+                throw new TeamException("Végzetes hiba, a racer lista nincs példányosítva!");
+            }
+            else
+            {
+                return racers.Count;
+            }
+            
         }
     }
 }

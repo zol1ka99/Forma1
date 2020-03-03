@@ -73,7 +73,7 @@ namespace Forma1projekt.Service
                 int numberOfTheRacers = f1Repository.getNumberOfRacers(teamNameToDelete);
                 if (numberOfTheRacers > 0)
                 {
-                    throw new TeamServiceException(teamNameToDelete + " nem lehet törölni, mert van még versenyzője.");
+                    throw new TeamServiceToGUIException(teamNameToDelete + " nem lehet törölni, mert van még versenyzője.");
                 }
                 else
                 {
