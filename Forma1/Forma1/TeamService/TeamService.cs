@@ -86,5 +86,17 @@ namespace Forma1projekt.Service
                 throw new TeamServiceException(f1e.Message);
             }
         }
+
+        public void modifyTeamName(string oldTeamName, string newTeamName)
+        {
+            try
+            {
+                f1Repository.update(oldTeamName, newTeamName);
+            }
+            catch(F1Exception f1e)
+            {
+                throw new TeamServiceException(f1e.Message);
+            }
+        }
     }
 }

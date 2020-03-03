@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Forma1projekt.Exceptionmy;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace Forma1projekt
         }
         private void buttonDeleteTeam_Click(object sender, EventArgs e)
         {
+            errorProviderDeleteTeam.Clear();
             try
             {
                 if (listBoxTeam.SelectedIndex < 0)
@@ -33,12 +35,27 @@ namespace Forma1projekt
                 listBoxTeam.DataSource = null;
                 listBoxTeam.DataSource = f1c.getTeamNames();
             }
-            catch (Exception)
+            catch (ControllerException ce)
             {
-
-                throw;
+                errorProviderDeleteTeam.SetError(buttonDeleteTeam, ce.Message);
             }
             
+        }
+
+        private void buttonUpdateTeam_Click(object sender, EventArgs e)
+        {
+            errorProviderModifyTeamName.Clear();
+            try
+            {
+                string oldTeamName = listBoxTeam.Text;
+                string newTeamName = textBoxTeamName.Text;
+
+                f1c.modifyTeamName(oldTeamName, newTeamName);
+            }
+            catch (ControllerException ce)
+            {
+                errorProviderModifyTeamName.SetError(buttonUpdateTeam, ce.Message);
+            }
         }
 
     }

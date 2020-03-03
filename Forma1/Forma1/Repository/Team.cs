@@ -58,5 +58,10 @@ namespace Forma1projekt.Repository
             }
             
         }
+
+        public void update(string newTeamName)
+        {
+            name = newTeamName;
+        }
     }
 }
